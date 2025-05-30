@@ -1,0 +1,38 @@
+# locals variables
+locals {
+  azure_regions_shortname = {
+    "australiaeast"      = "aue"
+    "australiasoutheast" = "aus"
+    "brazilsouth"        = "brs"
+    "canadacentral"      = "cac"
+    "canadaeast"         = "cae"
+    "centralindia"       = "cin"
+    "centralus"          = "cus"
+    "eastasia"           = "eas"
+    "eastus"             = "eus"
+    "eastus2"            = "eus2"
+    "francecentral"      = "frc"
+    "germanywestcentral" = "gwc"
+    "japaneast"          = "jpe"
+    "japanwest"          = "jpw"
+    "koreacentral"       = "krc"
+    "northcentralus"     = "ncus"
+    "northeurope"        = "neu"
+    "norwayeast"         = "nwe"
+    "southafricanorth"   = "san"
+    "southcentralus"     = "scus"
+    "southindia"         = "sin"
+    "southeastasia"      = "sea"
+    "swedencentral"      = "sec"
+    "switzerlandnorth"   = "chn"
+    "uaenorth"           = "uan"
+    "uksouth"            = "uks"
+    "ukwest"             = "ukw"
+    "westeurope"         = "weu"
+    "westus"             = "wus"
+    "westus2"            = "wus2"
+    "westus3"            = "wus3"
+  }
+
+  name_prefix = "${var.environment}-${local.azure_regions_shortname[var.location]}"
+}
